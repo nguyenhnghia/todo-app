@@ -1,0 +1,49 @@
+@use "../../../config/style/" as *;
+.todo-task {
+	display: flex;
+	align-items: center;
+	&_title {
+		width: 100%;
+		padding: 0.5rem 1rem;
+		padding-right: 4rem;
+		background: get-color(sky, 200);
+		border: 2px solid get-color(sky, 400);
+		border-radius: 0.4rem;
+		cursor: pointer;
+		user-select: none;
+		transition: 0.3s ease;
+	}
+
+	&_remove {
+		margin-left: -4.2rem;
+		cursor: pointer;
+		> svg {
+			transition: 0.3s ease;
+			fill: get-color(gray, 600);
+			opacity: 0.2;
+			width: 4rem;
+			height: 4rem;
+		}
+		&:hover {
+			> svg {
+				fill: get-color(gray, 900);
+				transform: scale(1.1);
+				opacity: 0.5;
+				opacity: 1;
+			}
+		}
+	}
+
+	&:hover &_title {
+		background: get-color(sky, 300);
+	}
+
+	&.completed &_title {
+		background: get-color(emerald, 200);
+		border: 2px solid get-color(emerald, 400);
+	}
+
+	&.completed:hover &_title {
+		background: get-color(emerald, 300);
+	}
+}

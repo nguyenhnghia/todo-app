@@ -1,0 +1,26 @@
+.app {
+	&_instruction {
+		text-align: center;
+		& > h1 {
+			font-size: 3rem;
+			padding: {
+				top: 1.5rem;
+				bottom: 1.5rem;
+			}
+		}
+		& > p {
+			font-size: 2rem;
+		}
+		p + p {
+			margin: {
+				top: 1rem;
+			}
+		}
+	}
+	&_content {
+		font-size: 2rem;
+		.input-todo {
+			margin: 3rem 0;
+		}
+	}
+}
